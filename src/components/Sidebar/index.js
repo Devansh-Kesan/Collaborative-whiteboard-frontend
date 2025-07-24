@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
-import './index.module.css';
+import styles from './index.module.css';
 import { useNavigate } from 'react-router-dom';
 import boardContext from '../../store/board-context';
 import { useParams } from 'react-router-dom';
 import socket from "../../utils/socket";
-
 
 const Sidebar = () => {
   const [canvases, setCanvases] = useState([]);
@@ -137,52 +136,52 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="sidebar">
+    <div className={styles.sidebar}>
       <button 
-        className="create-button" 
+        className={styles["create-button"]}
         onClick={handleCreateCanvas} 
         disabled={!isUserLoggedIn}
       >
         + Create New Canvas
       </button>
-      <ul className="canvas-list">
+      <ul className={styles["canvas-list"]}>
         {canvases.map(canvas => (
           <li 
             key={canvas._id} 
-            className={`canvas-item ${canvas._id === canvasId ? 'selected' : ''}`}
+            className={`${styles["canvas-item"]} ${canvas._id === canvasId ? styles.selected : ''}`}
           >
             <span 
-              className="canvas-name" 
+              className={styles["canvas-name"]} 
               onClick={() => handleCanvasClick(canvas._id)}
             >
               {canvas._id}
             </span>
-            <button className="delete-button" onClick={() => handleDeleteCanvas(canvas._id)}>
+            <button className={styles["delete-button"]} onClick={() => handleDeleteCanvas(canvas._id)}>
               del
             </button>
           </li>
         ))}
       </ul>
       
-      <div className="share-container">
+      <div className={styles["share-container"]}>
         <input
           type="email"
           placeholder="Enter the email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <button className="share-button" onClick={handleShare} disabled={!isUserLoggedIn}>
+        <button className={styles["share-button"]} onClick={handleShare} disabled={!isUserLoggedIn}>
           Share
         </button>
-        {error && <p className="error-message">{error}</p>}
-        {success && <p className="success-message">{success}</p>}
+        {error && <p className={styles["error-message"]}>{error}</p>}
+        {success && <p className={styles["success-message"]}>{success}</p>}
     </div>
       {isUserLoggedIn ? (
-        <button className="auth-button logout-button" onClick={handleLogout}>
+        <button className={`${styles["auth-button"]} ${styles["logout-button"]}`} onClick={handleLogout}>
           Logout
         </button>
       ) : (
-        <button className="auth-button login-button" onClick={handleLogin}>
+        <button className={`${styles["auth-button"]} ${styles["login-button"]}`} onClick={handleLogin}>
           Login
         </button>
       )}
