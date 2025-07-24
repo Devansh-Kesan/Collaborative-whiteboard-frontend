@@ -1,9 +1,20 @@
 import './App.css';
 
+import Register from "./components/Register";
+
+
+
+
 function App() {
   return (
-    <div className="App">
-    </div>
+    <BoardProvider>
+      <Router>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} /> 
+        </Routes>
+      </Router>
+    </BoardProvider>
   );
 }
 
