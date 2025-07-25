@@ -89,7 +89,7 @@ function Board({ id }) {
       
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/canvas/load/${id}`,
+          `https://realtime-whiteboard-1g1v.onrender.com/api/canvas/load/${id}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         
