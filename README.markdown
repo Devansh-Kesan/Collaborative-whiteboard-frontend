@@ -2,7 +2,7 @@
 
 A powerful real-time collaborative whiteboard platform that enables multiple users to draw, design, and interact with sub-second latency. Ideal for remote teams, educators, and creative professionals, this app offers a seamless shared visual workspace backed by a robust full-stack architecture.
 
-🔗 [Live Demo](https://your-deployed-project-link.com) *(Update with your deployed project URL)*
+🔗 [Live Demo](https://drawtogether.vercel.app/)
 
 ## ✨ Key Features
 
@@ -58,15 +58,15 @@ A powerful real-time collaborative whiteboard platform that enables multiple use
 - MongoDB instance (local or [MongoDB Atlas](https://www.mongodb.com/cloud/atlas))  
 
 ### 📁 Project Repositories
-- **Frontend Repo**: [Link to your frontend repo](https://github.com/your-username/your-frontend-repo) *(Update with your frontend repo link)*  
-- **Backend Repo**: [Link to your backend repo](https://github.com/your-username/your-backend-repo) *(Update with your backend repo link)*  
+- **Frontend Repo**: (https://github.com/Devansh-Kesan/Collaborative-whiteboard-frontend)
+- **Backend Repo**: (https://github.com/Devansh-Kesan/Collaborative-whiteboard) 
 
 ### 🛠 Backend Setup
 
 ```bash
 # Clone backend
-git clone https://github.com/your-username/your-backend-repo.git
-cd your-backend-repo
+git clone https://github.com/Devansh-Kesan/Collaborative-whiteboard.git
+cd Collaborative-whiteboard
 
 # Install dependencies
 npm install
@@ -94,8 +94,8 @@ Server runs at: `http://localhost:5000`
 
 ```bash
 # Clone frontend
-git clone https://github.com/your-username/your-frontend-repo.git
-cd your-frontend-repo
+git clone https://github.com/Devansh-Kesan/Collaborative-whiteboard-frontend.git
+cd Collaborative-whiteboard-frontend
 
 # Install dependencies
 npm install
